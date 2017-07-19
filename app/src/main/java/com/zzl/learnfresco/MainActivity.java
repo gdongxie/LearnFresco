@@ -1,5 +1,6 @@
 package com.zzl.learnfresco;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+    private Intent intent;
 
 
     @Override
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     //带进度条的图片
     @OnClick(R.id.btn_one)
     void btn_one_click(View view) {
+        intent = new Intent(this, FrescoOneActivity.class);
+        startActivity(intent);
     }
 
     //图片的不同裁剪
