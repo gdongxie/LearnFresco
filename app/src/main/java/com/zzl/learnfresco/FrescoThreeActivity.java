@@ -35,6 +35,8 @@ public class FrescoThreeActivity extends AppCompatActivity {
         //设置圆形图片
         Uri uri = Uri.parse("http://img.woyaogexing.com/2014/08/05/8be3cf8a34c13078!200x200.jpg");
         RoundingParams params = RoundingParams.asCircle();
+        //设置边界 （颜色 大小）
+        params.setBorder(getResources().getColor(R.color.colorAccent), 5);
         GenericDraweeHierarchy hierarchy = builder.setRoundingParams(params).build();
         simpleDraweeView.setHierarchy(hierarchy);
         simpleDraweeView.setImageURI(uri);
