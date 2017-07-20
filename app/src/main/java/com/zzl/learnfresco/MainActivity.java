@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     //图片的不同裁剪
     @OnClick(R.id.btn_two)
     void btn_two_click(View view) {
+        intent = new Intent(this, FrescoTwoActivity.class);
+        startActivity(intent);
     }
 
     //圆形与圆角图片
