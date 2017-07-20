@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FrescoOneActivity" />
-        <activity android:name=".FrescoTwoActivity"></activity>
+        <activity android:name=".FrescoTwoActivity" />
+        <activity android:name=".FrescoThreeActivity"></activity>
     </application>
 
 </manifest>

@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     //圆形与圆角图片
     @OnClick(R.id.btn_three)
     void btn_three_click(View view) {
+        intent = new Intent(this, FrescoThreeActivity.class);
+        startActivity(intent);
 
     }
 
