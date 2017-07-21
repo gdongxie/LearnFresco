@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".FrescoOneActivity" />
         <activity android:name=".FrescoTwoActivity" />
-        <activity android:name=".FrescoThreeActivity"></activity>
+        <activity android:name=".FrescoThreeActivity" />
+        <activity android:name=".FrescoFourActivity"></activity>
     </application>
 
 </manifest>

@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     //渐进式展示图片
     @OnClick(R.id.btn_four)
     void btn_four_click(View view) {
+        intent = new Intent(this, FrescoFourActivity.class);
+        startActivity(intent);
     }
 
     //Gif动画图片
