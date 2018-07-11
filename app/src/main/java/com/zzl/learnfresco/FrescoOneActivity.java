@@ -28,10 +28,11 @@ public class FrescoOneActivity extends AppCompatActivity {
 
     private void initData() {
         //图片地址
-        String path = "http://img1.mm131.com/pic/2619/16.jpg";
+        String path = "http://img.hb.aicdn.com/7d011f5a80475ce054fb4dad48d2139a62569adb41600-X4x6C6_fw658";
         //设置样式  进度条
         GenericDraweeHierarchyBuilder builder = new GenericDraweeHierarchyBuilder(getResources());
         GenericDraweeHierarchy hierarchy = builder.setProgressBarImage(new ProgressBarDrawable()).build();
+
         simpleDraweeView.setHierarchy(hierarchy);
 
         Uri uri = Uri.parse(path);

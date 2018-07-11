@@ -1,10 +1,11 @@
 package com.zzl.learnfresco;
 
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
@@ -33,7 +34,7 @@ public class FrescoThreeActivity extends AppCompatActivity {
     @OnClick(R.id.btn_fresco_circle)
     void btn_fresco_circle(View view) {
         //设置圆形图片
-        Uri uri = Uri.parse("http://img.woyaogexing.com/2014/08/05/8be3cf8a34c13078!200x200.jpg");
+        Uri uri = Uri.parse("http://img.hb.aicdn.com/b639d094e96cbe54ce7940e3c1d9bd365b0311a0346a7-gRBP0g_fw658");
         RoundingParams params = RoundingParams.asCircle();
         //设置边界 （颜色 大小）
         params.setBorder(getResources().getColor(R.color.colorAccent), 5);
@@ -45,14 +46,16 @@ public class FrescoThreeActivity extends AppCompatActivity {
     //设置圆角图片
     @OnClick(R.id.btn_fresco_conner)
     void btn_fresco_conner(View view) {
-        Uri uri = Uri.parse("http://img.woyaogexing.com/2014/08/05/9f33f7ff8db3bc29!200x200.jpg");
+        Uri uri = Uri.parse("http://img.hb.aicdn.com/b639d094e96cbe54ce7940e3c1d9bd365b0311a0346a7-gRBP0g_fw658");
         //设置圆角大小
         RoundingParams parmas = RoundingParams.fromCornersRadius(50f);
         //设置覆盖颜色
-        parmas.setOverlayColor(getResources().getColor(R.color.colorPrimary));
+//        parmas.setOverlayColor(getResources().getColor(R.color.colorPrimary));
         //设置边界 （颜色 大小）
-        parmas.setBorder(getResources().getColor(R.color.colorAccent), 5);
-        GenericDraweeHierarchy hierarchy = builder.setRoundingParams(parmas).build();
+           parmas.setBorder(getResources().getColor(R.color.colorAccent), 5);
+        GenericDraweeHierarchy hierarchy = builder.setRoundingParams(parmas)
+                .setActualImageScaleType(ScalingUtils.ScaleType.CENTER)
+                .build();
         simpleDraweeView.setHierarchy(hierarchy);
         simpleDraweeView.setImageURI(uri);
 

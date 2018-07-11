@@ -41,6 +41,11 @@ public class FrescoTwoActivity extends Activity {
 
     }
 
+    private void displayImage(GenericDraweeHierarchy hierarchy) {
+        simpleDraweeView.setHierarchy(hierarchy);
+        simpleDraweeView.setImageURI(Uri.parse("http://img.hb.aicdn.com/18b423d0ae2ddf0dcf09732d905981502d5833cd2fde8-JBKhIZ_fw658"));
+    }
+
     //保持宽高比，放大或缩小，使得两边大于或者等于显示边界，居中显示
     @OnClick(R.id.btn_fresco_centerCrop)
     void btn_fresco_centerCrop(View view) {
@@ -110,12 +115,6 @@ public class FrescoTwoActivity extends Activity {
         GenericDraweeHierarchy hierarchy = builder.setActualImageScaleType(null).build();
         displayImage(hierarchy);
 
-    }
-
-
-    private void displayImage(GenericDraweeHierarchy hierarchy) {
-        simpleDraweeView.setHierarchy(hierarchy);
-        simpleDraweeView.setImageURI(Uri.parse("http://img1.mm131.com/pic/2619/16.jpg"));
     }
 
 }

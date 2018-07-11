@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.zzl.learnfresco.FrescoOneActivity">
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/my_image_one"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginTop="20dp"
         fresco:placeholderImage="@drawable/bg" />
 
